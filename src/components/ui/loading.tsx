@@ -11,10 +11,12 @@ const Loading = () => {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <div className="w-20 h-20 bg-[#E8A341] rounded-lg flex items-center justify-center mx-auto mb-4">
-            <span className="text-white font-bold text-3xl">G</span>
+          <div className="w-50 h-auto rounded-lg flex items-center justify-center mx-auto mb-4">
+              <img
+                  src={'/Girassol_icon.svg'}
+                  alt={'Girassol icon'}/>
           </div>
-          <h2 className="text-2xl font-bold text-gray-900">Grupogirassol</h2>
+          <h2 className="text-2xl font-bold text-gray-900">GrupoGirassol</h2>
         </motion.div>
 
         {/* Loading Animation */}
@@ -42,7 +44,7 @@ const Loading = () => {
           transition={{ delay: 0.5 }}
           className="mt-4 text-gray-600"
         >
-          Carregando...
+          Carregando - Paciência...
         </motion.p>
       </div>
     </div>

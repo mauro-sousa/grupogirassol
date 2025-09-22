@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import {Image, Menu, X} from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,10 +35,11 @@ const Header = () => {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <Link to="/" className="flex items-center">
-              <div className="w-10 h-10 bg-[#E8A341] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">G</span>
+              <div className="w-28 h-auto  rounded-lg flex items-center justify-center">
+                <img
+                src={'/Girassol.svg'}
+                    alt={'Girassol logo'}/>
               </div>
-              <span className="ml-2 text-xl font-bold text-gray-900">Grupogirassol</span>
             </Link>
           </motion.div>
 

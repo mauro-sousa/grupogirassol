@@ -56,24 +56,25 @@ const Contact = () => {
       icon: <Phone className="h-6 w-6 text-[#E8A341]" />,
       title: "Telefone",
       details: [
-        "(11) 9999-9999",
-        "(11) 8888-8888"
+        "(+244) 945-537-787",
+        "(+244) 945-537-677",
+          "(+244) 945-536-877"
       ]
     },
     {
       icon: <Mail className="h-6 w-6 text-[#E8A341]" />,
       title: "E-mail",
       details: [
-        "contato@grupogirassol.com",
-        "vendas@grupogirassol.com"
+        "geral@grupogirassol.co.ao",
+        "vendas@grupogirassol.co.ao"
       ]
     },
     {
       icon: <MapPin className="h-6 w-6 text-[#E8A341]" />,
       title: "Endereço",
       details: [
-        "Av. Paulista, 1000",
-        "São Paulo, SP - 01310-100"
+        "Centralidade Kilamba, Edificio Z2, Apt 33",
+        "Luanda Angola"
       ]
     },
     {
@@ -417,7 +418,7 @@ const Contact = () => {
               Nossa Localização
             </h2>
             <p className="text-xl text-gray-600">
-              Visite nosso escritório no coração de São Paulo.
+              Visite nosso escritório na centralidade do Kilamba.
             </p>
           </motion.div>
           
@@ -437,17 +438,17 @@ const Contact = () => {
                   <MapPin className="h-16 w-16 text-[#E8A341] mx-auto mb-4" />
                 </motion.div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Av. Paulista, 1000
+                    Centralidade Kilamba,
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  São Paulo, SP - 01310-100
+                    Edificio Z2, Apt 33
                 </p>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Button variant="outline" className="border-[#E8A341] text-[#E8A341] hover:bg-[#E8A341] hover:text-white">
-                    Ver no Google Maps
+                    <a href={"https://maps.app.goo.gl/uKmopxA62ci9gGWC6"} target={'_blank'}>Ver no Google Maps</a>
                   </Button>
                 </motion.div>
               </div>

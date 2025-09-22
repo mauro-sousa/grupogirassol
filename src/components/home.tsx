@@ -287,7 +287,7 @@ function Home() {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Pronto para Transformar seu Negócio?
             </h2>
-            <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
               Entre em contato conosco hoje mesmo e descubra como podemos 
               ajudar sua empresa a alcançar novos patamares de sucesso.
             </p>
@@ -304,7 +304,7 @@ function Home() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-[#E8A341]" asChild>
+                <Button size="lg" variant="outline" className="gray-900 border-white hover:bg-white hover:text-[#E8A341]" asChild>
                   <Link to="/produtos">Ver Produtos</Link>
                 </Button>
               </motion.div>
