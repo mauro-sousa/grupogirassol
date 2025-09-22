@@ -115,7 +115,7 @@ const Footer = () => {
         >
           <p className="text-gray-400">
             ©{new Date().getFullYear()} Grupogirassol. Todos os direitos reservados. <br/>
-              <span className={'text-sm'}>Designed and Developed by <a href={"https://autisync.com/"} className={'text-white hover:text-[#E8A341]'}>Autisync</a>
+              <span className={'text-sm'}>Designed and Developed by <a href={"https://autisync.com/"} className={'text-white hover:text-[#E8A341]'}>Autisync </a>
 </span>
           </p>
         </motion.div>
