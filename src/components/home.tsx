@@ -2,39 +2,39 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Users, Target, Award, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Target, Award, TrendingUp, Wrench, Building2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 
 function Home() {
   const features = [
     {
-      icon: <Users className="h-8 w-8 text-[#E8A341]" />,
-      title: "Equipe Especializada",
-      description: "Profissionais qualificados e experientes para atender suas necessidades."
+      icon: <Building2 className="h-8 w-8 text-[#E8A341]" />,
+      title: "Engenharia e Construção Civil",
+      description: "Projetos residenciais, comerciais e industriais com excelência técnica e qualidade garantida."
     },
     {
-      icon: <Target className="h-8 w-8 text-[#E8A341]" />,
-      title: "Foco em Resultados",
-      description: "Estratégias direcionadas para alcançar seus objetivos de negócio."
+      icon: <Wrench className="h-8 w-8 text-[#E8A341]" />,
+      title: "Serviços Automóveis",
+      description: "Oficina mecânica completa com diagnóstico avançado, bate-chapa e pintura profissional."
     },
     {
       icon: <Award className="h-8 w-8 text-[#E8A341]" />,
-      title: "Qualidade Garantida",
-      description: "Compromisso com a excelência em todos os nossos serviços."
+      title: "Excelência e Rigor",
+      description: "Compromisso com os mais altos padrões de qualidade e segurança em cada projeto."
     },
     {
-      icon: <TrendingUp className="h-8 w-8 text-[#E8A341]" />,
-      title: "Crescimento Sustentável",
-      description: "Soluções que promovem o desenvolvimento contínuo da sua empresa."
+      icon: <Target className="h-8 w-8 text-[#E8A341]" />,
+      title: "Inovação Constante",
+      description: "Busca por novas tecnologias e métodos que aumentem nossa eficiência e resultados."
     }
   ];
 
   const services = [
-    "Consultoria Empresarial",
-    "Desenvolvimento de Produtos",
-    "Marketing Digital",
-    "Gestão de Projetos"
+    "Construção Civil e Infraestrutura",
+    "Mecânica e Eletrônica Automotiva",
+    "Bate-Chapa e Pintura",
+    "Fiscalização e Gestão de Obras"
   ];
 
   const containerVariants = {
@@ -75,7 +75,7 @@ function Home() {
                 transition={{ delay: 0.2 }}
               >
                 <Badge className="mb-4 bg-orange-100 text-[#E8A341] hover:bg-orange-100 border-[#E8A341]">
-                  Inovação e Excelência
+                  Excelência Angolana
                 </Badge>
               </motion.div>
               
@@ -85,9 +85,9 @@ function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                Transformando
-                <span className="text-[#E8A341]"> Ideias </span>
-                em Realidade
+                Grupo
+                <span className="text-[#E8A341]"> Girassol </span>
+                - Construindo o Futuro
               </motion.h1>
               
               <motion.p 
@@ -96,8 +96,9 @@ function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                No Grupogirassol, oferecemos soluções inovadoras e personalizadas 
-                para impulsionar o crescimento do seu negócio com qualidade e eficiência.
+                Empresa angolana multifacetada atuando em Engenharia e Construção Civil 
+                e Serviços Automóveis. Somos parceiros de confiança, oferecendo soluções 
+                de alta qualidade com profissionalismo e transparência.
               </motion.p>
               
               <motion.div 
@@ -135,8 +136,8 @@ function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80"
-                alt="Equipe trabalhando"
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80"
+                alt="Construção e Engenharia"
                 className="rounded-2xl shadow-2xl"
               />
               <motion.div 
@@ -150,8 +151,8 @@ function Home() {
                     <CheckCircle className="h-6 w-6 text-[#E8A341]" />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-900">500+</p>
-                    <p className="text-sm text-gray-600">Projetos Concluídos</p>
+                    <p className="font-semibold text-gray-900">Referência</p>
+                    <p className="text-sm text-gray-600">em Angola</p>
                   </div>
                 </div>
               </motion.div>
@@ -171,11 +172,11 @@ function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Por que Escolher o Grupogirassol?
+              Por que Escolher o Grupo Girassol?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Combinamos experiência, inovação e dedicação para entregar 
-              resultados excepcionais para nossos clientes.
+              Combinamos vasta experiência com tecnologias modernas para entregar 
+              soluções excepcionais que superam as expectativas dos nossos clientes.
             </p>
           </motion.div>
           
@@ -225,8 +226,8 @@ function Home() {
                 Nossos Principais Serviços
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Oferecemos uma ampla gama de serviços especializados para 
-                atender às necessidades específicas do seu negócio.
+                Atuamos em dois setores estratégicos e complementares para a 
+                economia angolana, oferecendo serviços de alta qualidade e confiabilidade.
               </p>
               
               <div className="space-y-4 mb-8">
@@ -266,8 +267,8 @@ function Home() {
               viewport={{ once: true }}
             >
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80"
-                alt="Serviços"
+                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80"
+                alt="Serviços Automóveis e Construção"
                 className="rounded-2xl shadow-xl"
               />
             </motion.div>
@@ -285,11 +286,11 @@ function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Pronto para Transformar seu Negócio?
+              Pronto para Ser Nosso Parceiro?
             </h2>
-            <p className="text-xl text-gray-100 mb-8 max-w-3xl mx-auto">
-              Entre em contato conosco hoje mesmo e descubra como podemos 
-              ajudar sua empresa a alcançar novos patamares de sucesso.
+            <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+              Entre em contato conosco e descubra como o Grupo Girassol pode 
+              contribuir para o sucesso do seu projeto com qualidade e transparência.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div
@@ -304,8 +305,8 @@ function Home() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button size="lg" variant="outline" className="gray-900 border-white hover:bg-white hover:text-[#E8A341]" asChild>
-                  <Link to="/produtos">Ver Produtos</Link>
+                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-[#E8A341]" asChild>
+                  <Link to="/servicos">Nossos Serviços</Link>
                 </Button>
               </motion.div>
             </div>

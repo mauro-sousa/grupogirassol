@@ -3,121 +3,135 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { 
-  Smartphone, 
-  Globe, 
-  Database, 
-  Shield, 
+  Building2, 
+  Wrench, 
+  Users, 
+  Award, 
   Zap, 
-  Cloud,
+  Shield,
   ArrowRight,
   Star,
-  Download,
-  Eye
+  CheckCircle,
+  Eye,
+  Target,
+  Lightbulb
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
 
 const Products = () => {
-  const products = [
+  const capabilities = [
     {
-      icon: <Smartphone className="h-8 w-8 text-[#E8A341]" />,
-      title: "GiraApp Mobile",
-      category: "Aplicativo Móvel",
-      description: "Aplicativo completo para gestão empresarial com interface intuitiva e recursos avançados.",
+      icon: <Building2 className="h-8 w-8 text-[#E8A341]" />,
+      title: "Engenharia Civil Avançada",
+      category: "Construção",
+      description: "Equipe de engenheiros civis e arquitetos que transforma visões em projetos detalhados e funcionais.",
       features: [
-        "Dashboard em tempo real",
-        "Relatórios personalizados",
-        "Sincronização offline",
-        "Notificações push"
+        "Projetos residenciais de luxo",
+        "Complexos comerciais modernos",
+        "Infraestrutura urbana e rural",
+        "Gestão completa de obras"
       ],
-      price: "R$ 49,90/mês",
-      rating: 4.8,
-      downloads: "10K+",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80"
+      expertise: "15+ anos",
+      projects: "200+",
+      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&q=80"
     },
     {
-      icon: <Globe className="h-8 w-8 text-[#E8A341]" />,
-      title: "GiraWeb Platform",
-      category: "Plataforma Web",
-      description: "Plataforma web robusta para gerenciamento completo de projetos e equipes.",
+      icon: <Wrench className="h-8 w-8 text-[#E8A341]" />,
+      title: "Diagnóstico Automotivo",
+      category: "Automóvel",
+      description: "Tecnologia de diagnóstico de ponta para identificar rapidez e precisão problemas complexos em veículos.",
       features: [
-        "Gestão de projetos",
-        "Colaboração em equipe",
-        "Integrações API",
-        "Analytics avançado"
+        "Equipamentos de última geração",
+        "Diagnóstico de sistemas eletrônicos",
+        "Análise de ECUs e ABS",
+        "Relatórios técnicos detalhados"
       ],
-      price: "R$ 99,90/mês",
-      rating: 4.9,
-      downloads: "5K+",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80"
-    },
-    {
-      icon: <Database className="h-8 w-8 text-[#E8A341]" />,
-      title: "GiraData Analytics",
-      category: "Business Intelligence",
-      description: "Solução completa de análise de dados com dashboards interativos e insights automáticos.",
-      features: [
-        "Dashboards interativos",
-        "Machine Learning",
-        "Relatórios automáticos",
-        "Previsões de tendências"
-      ],
-      price: "R$ 149,90/mês",
-      rating: 4.7,
-      downloads: "3K+",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80"
+      expertise: "10+ anos",
+      projects: "5000+",
+      image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=400&q=80"
     },
     {
       icon: <Shield className="h-8 w-8 text-[#E8A341]" />,
-      title: "GiraSecure",
-      category: "Segurança",
-      description: "Sistema avançado de segurança digital com monitoramento 24/7 e proteção multicamadas.",
+      title: "Controle de Qualidade",
+      category: "Fiscalização",
+      description: "Inspeções rigorosas de materiais e mão de obra para garantir conformidade com normas técnicas.",
       features: [
-        "Monitoramento 24/7",
-        "Firewall avançado",
-        "Backup automático",
-        "Auditoria de segurança"
+        "Auditoria de processos",
+        "Controle de materiais",
+        "Supervisão técnica",
+        "Certificação de qualidade"
       ],
-      price: "R$ 79,90/mês",
-      rating: 4.9,
-      downloads: "8K+",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&q=80"
+      expertise: "12+ anos",
+      projects: "150+",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+    },
+    {
+      icon: <Users className="h-8 w-8 text-[#E8A341]" />,
+      title: "Gestão de Equipas",
+      category: "Recursos Humanos",
+      description: "Gestores de obra e supervisores que garantem execução precisa de cada etapa da construção.",
+      features: [
+        "Coordenação de equipas",
+        "Gestão de cronogramas",
+        "Supervisão de segurança",
+        "Treinamento especializado"
+      ],
+      expertise: "8+ anos",
+      projects: "300+",
+      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80"
     },
     {
       icon: <Zap className="h-8 w-8 text-[#E8A341]" />,
-      title: "GiraAutomation",
-      category: "Automação",
-      description: "Ferramenta de automação de processos para otimizar workflows e aumentar produtividade.",
+      title: "Tecnologia Avançada",
+      category: "Inovação",
+      description: "Investimento constante em equipamentos e ferramentas modernas para garantir eficiência superior.",
       features: [
-        "Workflows personalizados",
-        "Integrações múltiplas",
-        "Triggers automáticos",
-        "Monitoramento de performance"
+        "Equipamentos de ponta",
+        "Software especializado",
+        "Ferramentas de precisão",
+        "Sistemas integrados"
       ],
-      price: "R$ 69,90/mês",
-      rating: 4.6,
-      downloads: "7K+",
+      expertise: "Sempre atualizado",
+      projects: "Todos",
       image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&q=80"
     },
     {
-      icon: <Cloud className="h-8 w-8 text-[#E8A341]" />,
-      title: "GiraCloud Storage",
-      category: "Armazenamento",
-      description: "Solução de armazenamento em nuvem segura e escalável para empresas de todos os tamanhos.",
+      icon: <Award className="h-8 w-8 text-[#E8A341]" />,
+      title: "Excelência Comprovada",
+      category: "Qualidade",
+      description: "Compromisso com os mais altos padrões de qualidade e segurança, reconhecido no mercado angolano.",
       features: [
-        "Armazenamento ilimitado",
-        "Sincronização automática",
-        "Compartilhamento seguro",
-        "Versionamento de arquivos"
+        "Certificações técnicas",
+        "Padrões internacionais",
+        "Garantia de qualidade",
+        "Reconhecimento do mercado"
       ],
-      price: "R$ 29,90/mês",
-      rating: 4.8,
-      downloads: "15K+",
-      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=80"
+      expertise: "Referência",
+      projects: "100% sucesso",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&q=80"
     }
   ];
 
-  const categories = ["Todos", "Aplicativo Móvel", "Plataforma Web", "Business Intelligence", "Segurança", "Automação", "Armazenamento"];
+  const categories = ["Todos", "Construção", "Automóvel", "Fiscalização", "Recursos Humanos", "Inovação", "Qualidade"];
+
+  const differentials = [
+    {
+      icon: <Target className="h-8 w-8 text-[#E8A341]" />,
+      title: "Soluções Integradas",
+      description: "Capacidade única de atuar em engenharia e serviços automóveis, oferecendo conveniência e sinergia."
+    },
+    {
+      icon: <Shield className="h-8 w-8 text-[#E8A341]" />,
+      title: "Rigor e Qualidade",
+      description: "Compromisso com os mais altos padrões de qualidade e segurança em todos os projetos."
+    },
+    {
+      icon: <Lightbulb className="h-8 w-8 text-[#E8A341]" />,
+      title: "Transparência Total",
+      description: "Diálogo aberto e honesto, mantendo clientes sempre informados sobre o progresso dos projetos."
+    }
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -152,16 +166,16 @@ const Products = () => {
             transition={{ duration: 0.6 }}
           >
             <Badge className="mb-4 bg-orange-100 text-[#E8A341] hover:bg-orange-100 border-[#E8A341]">
-              Nossos Produtos
+              Nossas Capacidades
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Produtos
-              <span className="text-[#E8A341]"> Inovadores </span>
-              para sua Empresa
+              Expertise
+              <span className="text-[#E8A341]"> Comprovada </span>
+              em Cada Área
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Descubra nossa linha completa de produtos digitais desenvolvidos 
-              para otimizar processos e impulsionar o crescimento do seu negócio.
+              Conheça nossas competências técnicas e especializações que nos tornam 
+              referência em Engenharia Civil e Serviços Automóveis em Angola.
             </p>
           </motion.div>
         </div>
@@ -198,7 +212,7 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Capabilities Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -208,17 +222,17 @@ const Products = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {products.map((product, index) => (
+            {capabilities.map((capability, index) => (
               <motion.div key={index} variants={itemVariants}>
                 <Card className="hover:shadow-lg transition-all duration-300 overflow-hidden hover:-translate-y-1 border-t-4 border-t-[#E8A341]">
                   <div className="relative">
                     <img
-                      src={product.image}
-                      alt={product.title}
+                      src={capability.image}
+                      alt={capability.title}
                       className="w-full h-48 object-cover"
                     />
                     <Badge className="absolute top-4 left-4 bg-white text-[#E8A341] border-[#E8A341]">
-                      {product.category}
+                      {capability.category}
                     </Badge>
                   </div>
 
@@ -229,29 +243,29 @@ const Products = () => {
                           whileHover={{ scale: 1.1, rotate: 5 }}
                           transition={{ type: "spring", stiffness: 400, damping: 10 }}
                         >
-                          {product.icon}
+                          {capability.icon}
                         </motion.div>
-                        <CardTitle className="ml-2 text-xl">{product.title}</CardTitle>
+                        <CardTitle className="ml-2 text-xl">{capability.title}</CardTitle>
                       </div>
                     </div>
                     
                     <div className="flex items-center space-x-4 text-sm text-gray-600 mb-3">
                       <div className="flex items-center">
                         <Star className="h-4 w-4 text-yellow-400 mr-1" />
-                        <span>{product.rating}</span>
+                        <span>{capability.expertise}</span>
                       </div>
                       <div className="flex items-center">
-                        <Download className="h-4 w-4 mr-1" />
-                        <span>{product.downloads}</span>
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-1" />
+                        <span>{capability.projects}</span>
                       </div>
                     </div>
                     
-                    <p className="text-gray-600">{product.description}</p>
+                    <p className="text-gray-600">{capability.description}</p>
                   </CardHeader>
 
                   <CardContent>
                     <div className="space-y-2 mb-6">
-                      {product.features.map((feature, idx) => (
+                      {capability.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center text-sm">
                           <div className="w-1.5 h-1.5 bg-[#E8A341] rounded-full mr-2"></div>
                           <span className="text-gray-700">{feature}</span>
@@ -259,32 +273,24 @@ const Products = () => {
                       ))}
                     </div>
                     
-                    <div className="border-t pt-4">
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="text-2xl font-bold text-[#E8A341]">
-                          {product.price}
-                        </span>
-                      </div>
-                      
-                      <div className="flex space-x-2">
-                        <motion.div 
-                          className="flex-1"
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                        >
-                          <Button className="w-full bg-[#E8A341] hover:bg-[#D4941F] text-white" asChild>
-                            <Link to="/contato">Adquirir</Link>
-                          </Button>
-                        </motion.div>
-                        <motion.div
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                        >
-                          <Button variant="outline" size="sm" className="border-[#E8A341] text-[#E8A341] hover:bg-[#E8A341] hover:text-white">
-                            <Eye className="h-4 w-4" />
-                          </Button>
-                        </motion.div>
-                      </div>
+                    <div className="flex space-x-2">
+                      <motion.div 
+                        className="flex-1"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <Button className="w-full bg-[#E8A341] hover:bg-[#D4941F] text-white" asChild>
+                          <Link to="/contato">Consultar</Link>
+                        </Button>
+                      </motion.div>
+                      <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
+                        <Button variant="outline" size="sm" className="border-[#E8A341] text-[#E8A341] hover:bg-[#E8A341] hover:text-white">
+                          <Eye className="h-4 w-4" />
+                        </Button>
+                      </motion.div>
                     </div>
                   </CardContent>
                 </Card>
@@ -294,7 +300,7 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Differentials Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -305,10 +311,10 @@ const Products = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Por que Escolher Nossos Produtos?
+              Nossos Diferenciais
             </h2>
             <p className="text-xl text-gray-600">
-              Desenvolvidos com as mais modernas tecnologias e foco na experiência do usuário.
+              O que nos torna únicos no mercado angolano e a escolha ideal para seus projetos.
             </p>
           </motion.div>
           
@@ -319,38 +325,58 @@ const Products = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {[
-              {
-                icon: <Shield className="h-8 w-8 text-[#E8A341]" />,
-                title: "Segurança Avançada",
-                description: "Todos os nossos produtos seguem os mais altos padrões de segurança digital."
-              },
-              {
-                icon: <Zap className="h-8 w-8 text-[#E8A341]" />,
-                title: "Performance Otimizada",
-                description: "Desenvolvidos para máxima performance e eficiência operacional."
-              },
-              {
-                icon: <Cloud className="h-8 w-8 text-[#E8A341]" />,
-                title: "Escalabilidade",
-                description: "Soluções que crescem junto com o seu negócio, sem limitações."
-              }
-            ].map((feature, index) => (
+            {differentials.map((differential, index) => (
               <motion.div key={index} className="text-center" variants={itemVariants}>
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  >
-                    {feature.icon}
-                  </motion.div>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600">
-                  {feature.description}
-                </p>
+                <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-[#E8A341]">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <motion.div
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                      >
+                        {differential.icon}
+                      </motion.div>
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      {differential.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {differential.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, staggerChildren: 0.1 }}
+            viewport={{ once: true }}
+          >
+            {[
+              { number: "15+", label: "Anos de Experiência" },
+              { number: "500+", label: "Projetos Concluídos" },
+              { number: "100%", label: "Clientes Satisfeitos" },
+              { number: "24/7", label: "Suporte Disponível" }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 bg-orange-50 rounded-lg hover:bg-orange-100 transition-colors"
+              >
+                <div className="text-4xl font-bold text-[#E8A341] mb-2">{stat.number}</div>
+                <div className="text-gray-600">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -367,11 +393,11 @@ const Products = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Pronto para Transformar seu Negócio?
+              Pronto para Conhecer Nossa Expertise?
             </h2>
             <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
-              Experimente nossos produtos gratuitamente por 30 dias e 
-              descubra como eles podem revolucionar sua empresa.
+              Entre em contato conosco e descubra como nossa experiência e 
+              competência técnica podem beneficiar seu próximo projeto.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div
@@ -380,7 +406,7 @@ const Products = () => {
               >
                 <Button size="lg" variant="secondary" asChild>
                   <Link to="/contato">
-                    Teste Grátis por 30 Dias
+                    Fale Conosco
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

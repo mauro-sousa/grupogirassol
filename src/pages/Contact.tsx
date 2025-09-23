@@ -56,10 +56,10 @@ const Contact = () => {
       icon: <Phone className="h-6 w-6 text-[#E8A341]" />,
       title: "Telefone",
       details: [
+
         "(+244) 945-537-787",
         "(+244) 945-537-677",
-          "(+244) 945-536-877"
-      ]
+          "(+244) 945-536-877"      ]
     },
     {
       icon: <Mail className="h-6 w-6 text-[#E8A341]" />,
@@ -73,6 +73,7 @@ const Contact = () => {
       icon: <MapPin className="h-6 w-6 text-[#E8A341]" />,
       title: "Endereço",
       details: [
+
         "Centralidade Kilamba, Edificio Z2, Apt 33",
         "Luanda Angola"
       ]
@@ -81,22 +82,21 @@ const Contact = () => {
       icon: <Clock className="h-6 w-6 text-[#E8A341]" />,
       title: "Horário de Atendimento",
       details: [
-        "Segunda a Sexta: 8h às 18h",
-        "Sábado: 8h às 12h"
+        "Segunda a Sexta: 7h às 17h",
+        "Sábado: 7h às 12h"
       ]
     }
   ];
 
   const services = [
-    "Consultoria Empresarial",
-    "Desenvolvimento de Soluções",
-    "Marketing e Crescimento",
-    "Gestão de Projetos",
-    "Automação de Processos",
-    "Business Intelligence",
-    "Planejamento Estratégico",
-    "Inovação e Transformação",
-    "Compliance e Governança",
+    "Construção Civil",
+    "Projetos Residenciais",
+    "Projetos Comerciais e Industriais",
+    "Fiscalização e Gestão de Obras",
+    "Obras de Infraestrutura",
+    "Mecânica e Eletrônica Automotiva",
+    "Bate-Chapa e Pintura",
+    "Serviços Especiais Automotivos",
     "Outros"
   ];
 
@@ -108,6 +108,10 @@ const Contact = () => {
     },
     {
       icon: <Users className="h-8 w-8 text-[#E8A341]" />,
+      number: "15+",
+      label: "Anos de Experiência"
+    {
+      icon: <Building className="h-8 w-8 text-[#E8A341]" />,
       number: "150+",
       label: "Clientes Atendidos"
     },
@@ -115,7 +119,7 @@ const Contact = () => {
       icon: <Building className="h-8 w-8 text-[#E8A341]" />,
       number: "24/7",
       label: "Suporte Disponível"
-    }
+      }
   ];
 
   const containerVariants = {
@@ -154,13 +158,15 @@ const Contact = () => {
               Entre em Contato
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Vamos
+              Vamos 
+              <span className="text-[#E8A341]"> Construir </span>
+               Construir
               <span className="text-[#E8A341]"> Conversar </span>
-              sobre seu Projeto
+              Juntos o seu Projeto
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Estamos prontos para ajudar você a transformar suas ideias em realidade. 
-              Entre em contato conosco e receba uma proposta personalizada.
+              Estamos prontos para ser seu parceiro de confiança. Entre em contato 
+              conosco e descubra como podemos transformar suas ideias em realidade.
             </p>
           </motion.div>
         </div>
@@ -179,9 +185,10 @@ const Contact = () => {
             >
               <Card className="border-t-4 border-t-[#E8A341]">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Envie sua Mensagem</CardTitle>
+                  <CardTitle className="text-2xl">Solicite seu Orçamento</CardTitle>
                   <p className="text-gray-600">
-                    Preencha o formulário abaixo e nossa equipe entrará em contato em até 2 horas.
+                    Preencha o formulário abaixo e nossa equipe entrará em contato 
+                    para apresentar a melhor solução para seu projeto.
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -237,7 +244,7 @@ const Contact = () => {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          placeholder="(11) 99999-9999"
+                          placeholder="+244 XXX XXX XXX"
                           className="focus:border-[#E8A341] focus:ring-[#E8A341]"
                         />
                       </motion.div>
@@ -286,13 +293,14 @@ const Contact = () => {
                       transition={{ delay: 0.6 }}
                       viewport={{ once: true }}
                     >
+
                       <Label htmlFor="message">Mensagem *</Label>
                       <Textarea
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        placeholder="Conte-nos mais sobre seu projeto ou necessidade..."
+                        placeholder="Conte-nos mais sobre seu projeto, localização, prazos e necessidades específicas..."
                         rows={5}
                         className="focus:border-[#E8A341] focus:ring-[#E8A341]"
                         required
@@ -305,7 +313,7 @@ const Contact = () => {
                     >
                       <Button type="submit" size="lg" className="w-full bg-[#E8A341] hover:bg-[#D4941F] text-white">
                         <Send className="mr-2 h-4 w-4" />
-                        Enviar Mensagem
+                        Solicitar Orçamento
                       </Button>
                     </motion.div>
                   </form>
@@ -365,7 +373,7 @@ const Contact = () => {
               {/* Stats */}
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Nosso Compromisso
+                  Nossa Experiência
                 </h3>
                 <motion.div 
                   className="grid grid-cols-1 gap-4"
@@ -404,7 +412,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section */}
+      {/* Location Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -438,6 +446,10 @@ const Contact = () => {
                   <MapPin className="h-16 w-16 text-[#E8A341] mx-auto mb-4" />
                 </motion.div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Grupo Girassol, Lda
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Luanda, Angola
                     Centralidade Kilamba,
                 </h3>
                 <p className="text-gray-600 mb-4">
@@ -448,6 +460,7 @@ const Contact = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Button variant="outline" className="border-[#E8A341] text-[#E8A341] hover:bg-[#E8A341] hover:text-white">
+                    Ver Localização
                     <a href={"https://maps.app.goo.gl/uKmopxA62ci9gGWC6"} target={'_blank'}>Ver no Google Maps</a>
                   </Button>
                 </motion.div>
@@ -471,7 +484,7 @@ const Contact = () => {
               Perguntas Frequentes
             </h2>
             <p className="text-xl text-gray-600">
-              Respostas para as dúvidas mais comuns dos nossos clientes.
+              Respostas para as dúvidas mais comuns sobre nossos serviços.
             </p>
           </motion.div>
           
@@ -484,9 +497,21 @@ const Contact = () => {
           >
             {[
               {
-                question: "Qual é o prazo médio para desenvolvimento de um projeto?",
-                answer: "O prazo varia conforme a complexidade do projeto, mas geralmente nossos projetos são entregues entre 2 a 8 semanas."
+                question: "Qual é o prazo médio para execução de uma obra?",
+                answer: "O prazo varia conforme a complexidade e tamanho do projeto. Obras residenciais geralmente levam de 6 a 18 meses, enquanto projetos comerciais podem variar de 12 a 36 meses."
               },
+              {
+                question: "Vocês oferecem garantia nos serviços prestados?",
+                answer: "Sim, oferecemos garantia em todos os nossos serviços. Para construção civil, a garantia é de 5 anos para estrutura e 1 ano para acabamentos. Para serviços automóveis, oferecemos garantia de 6 meses."
+              },
+              {
+                question: "Como funciona o processo de orçamento?",
+                answer: "Após o primeiro contato, agendamos uma visita técnica para avaliar o projeto. Em seguida, elaboramos um orçamento detalhado que é apresentado em até 7 dias úteis."
+              },
+              {
+                question: "Vocês trabalham com financiamento de obras?",
+                answer: "Trabalhamos com diversas modalidades de pagamento e podemos orientar sobre opções de financiamento disponíveis no mercado angolano."
+             },
               {
                 question: "Vocês oferecem suporte após a entrega?",
                 answer: "Sim, oferecemos suporte técnico completo por 90 dias após a entrega, além de planos de manutenção contínua."
