@@ -305,7 +305,7 @@ function Home() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-[#E8A341]" asChild>
+                <Button size="lg" variant="outline" className="text-gray-800 border-white hover:bg-white hover:text-[#E8A341]" asChild>
                   <Link to="/servicos">Nossos Serviços</Link>
                 </Button>
               </motion.div>
