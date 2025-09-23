@@ -15,11 +15,12 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-[#E8A341] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">G</span>
+            <div className="flex items-center">
+              <div className="w-40 h-auto rounded-lg flex items-center justify-center">
+                  <img
+                      src={'/Girassol.svg'}
+                      alt={'Girassol logo'}/>
               </div>
-              <span className="ml-2 text-xl font-bold">Grupogirassol</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
               Comprometidos com a excelência e inovação, oferecemos soluções completas 
@@ -84,17 +85,21 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-[#E8A341]" />
-                <span className="text-gray-300">(11) 9999-9999</span>
+                <span className="text-gray-300"><span className={'text-[#E8A341]'}>Geral:</span> (+244) 945 537 787</span>
               </div>
+                <div className="flex items-center">
+                    <Phone className="h-4 w-4 mr-2 text-[#E8A341]" />
+                    <span className="text-gray-300">(+244) 945 537 677 <br/>(+244) 945 536 877</span>
+                </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-[#E8A341]" />
-                <span className="text-gray-300">contato@grupogirassol.com</span>
+                <span className="text-gray-300">geral@grupogirassol.co.ao</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 mt-1 text-[#E8A341]" />
                 <span className="text-gray-300">
-                  São Paulo, SP<br />
-                  Brasil
+                  Centralidade Kilamba,<br />Edificio Z2, Apt 33<br/>
+                  Luanda Angola
                 </span>
               </div>
             </div>
@@ -109,7 +114,9 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <p className="text-gray-400">
-            © 2024 Grupogirassol. Todos os direitos reservados.
+            ©{new Date().getFullYear()} Grupogirassol. Todos os direitos reservados. <br/>
+              <span className={'text-sm'}>Designed and Developed by <a href={"https://autisync.com/"} className={'text-white hover:text-[#E8A341]'}>Autisync </a>
+</span>
           </p>
         </motion.div>
       </div>

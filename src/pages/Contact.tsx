@@ -56,24 +56,26 @@ const Contact = () => {
       icon: <Phone className="h-6 w-6 text-[#E8A341]" />,
       title: "Telefone",
       details: [
-        "+244 XXX XXX XXX",
-        "+244 XXX XXX XXX"
-      ]
+
+        "(+244) 945-537-787",
+        "(+244) 945-537-677",
+          "(+244) 945-536-877"      ]
     },
     {
       icon: <Mail className="h-6 w-6 text-[#E8A341]" />,
       title: "E-mail",
       details: [
-        "geral@grupogirassol.ao",
-        "comercial@grupogirassol.ao"
+        "geral@grupogirassol.co.ao",
+        "vendas@grupogirassol.co.ao"
       ]
     },
     {
       icon: <MapPin className="h-6 w-6 text-[#E8A341]" />,
       title: "Endereço",
       details: [
-        "Luanda, Angola",
-        "Endereço completo a definir"
+
+        "Centralidade Kilamba, Edificio Z2, Apt 33",
+        "Luanda Angola"
       ]
     },
     {
@@ -101,19 +103,23 @@ const Contact = () => {
   const stats = [
     {
       icon: <MessageSquare className="h-8 w-8 text-[#E8A341]" />,
-      number: "< 24h",
+      number: "< 2h",
       label: "Tempo de Resposta"
     },
     {
       icon: <Users className="h-8 w-8 text-[#E8A341]" />,
-      number: "500+",
-      label: "Projetos Realizados"
+      number: "15+",
+      label: "Anos de Experiência"
+    {
+      icon: <Building className="h-8 w-8 text-[#E8A341]" />,
+      number: "150+",
+      label: "Clientes Atendidos"
     },
     {
       icon: <Building className="h-8 w-8 text-[#E8A341]" />,
-      number: "15+",
-      label: "Anos de Experiência"
-    }
+      number: "24/7",
+      label: "Suporte Disponível"
+      }
   ];
 
   const containerVariants = {
@@ -152,9 +158,11 @@ const Contact = () => {
               Entre em Contato
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Vamos
+              Vamos 
               <span className="text-[#E8A341]"> Construir </span>
-              Juntos seu Projeto
+               Construir
+              <span className="text-[#E8A341]"> Conversar </span>
+              Juntos o seu Projeto
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Estamos prontos para ser seu parceiro de confiança. Entre em contato 
@@ -285,7 +293,8 @@ const Contact = () => {
                       transition={{ delay: 0.6 }}
                       viewport={{ once: true }}
                     >
-                      <Label htmlFor="message">Descrição do Projeto *</Label>
+
+                      <Label htmlFor="message">Mensagem *</Label>
                       <Textarea
                         id="message"
                         name="message"
@@ -417,7 +426,7 @@ const Contact = () => {
               Nossa Localização
             </h2>
             <p className="text-xl text-gray-600">
-              Visite-nos em Luanda e conheça nossas instalações.
+              Visite nosso escritório na centralidade do Kilamba.
             </p>
           </motion.div>
           
@@ -441,6 +450,10 @@ const Contact = () => {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   Luanda, Angola
+                    Centralidade Kilamba,
+                </h3>
+                <p className="text-gray-600 mb-4">
+                    Edificio Z2, Apt 33
                 </p>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -448,6 +461,7 @@ const Contact = () => {
                 >
                   <Button variant="outline" className="border-[#E8A341] text-[#E8A341] hover:bg-[#E8A341] hover:text-white">
                     Ver Localização
+                    <a href={"https://maps.app.goo.gl/uKmopxA62ci9gGWC6"} target={'_blank'}>Ver no Google Maps</a>
                   </Button>
                 </motion.div>
               </div>
@@ -497,6 +511,14 @@ const Contact = () => {
               {
                 question: "Vocês trabalham com financiamento de obras?",
                 answer: "Trabalhamos com diversas modalidades de pagamento e podemos orientar sobre opções de financiamento disponíveis no mercado angolano."
+             },
+              {
+                question: "Vocês oferecem suporte após a entrega?",
+                answer: "Sim, oferecemos suporte técnico completo por 90 dias após a entrega, além de planos de manutenção contínua."
+              },
+              {
+                question: "Como funciona o processo de orçamento?",
+                answer: "Após o primeiro contato, agendamos uma reunião para entender suas necessidades e apresentamos uma proposta personalizada em até 48 horas."
               }
             ].map((faq, index) => (
               <motion.div key={index} variants={itemVariants}>
