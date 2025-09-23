@@ -3,17 +3,20 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { 
-  Briefcase, 
-  Code, 
-  TrendingUp, 
-  Users, 
+  Building2, 
+  Wrench, 
+  Paintbrush, 
+  ClipboardCheck, 
   Settings, 
-  BarChart3,
+  Zap,
   ArrowRight,
   CheckCircle,
   Target,
   Lightbulb,
-  Shield
+  Shield,
+  Car,
+  Hammer,
+  MapPin
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '@/components/layout/Layout';
@@ -21,135 +24,117 @@ import Layout from '@/components/layout/Layout';
 const Services = () => {
   const services = [
     {
-      icon: <Briefcase className="h-8 w-8 text-[#E8A341]" />,
-      title: "Consultoria Empresarial",
-      description: "Estratégias personalizadas para otimizar processos e aumentar a eficiência do seu negócio com foco em resultados sustentáveis.",
+      icon: <Building2 className="h-8 w-8 text-[#E8A341]" />,
+      title: "Construção Civil",
+      description: "Projetos residenciais, comerciais e industriais com tecnologia de ponta e equipe qualificada para entregar obras com rapidez e precisão.",
       features: [
-        "Análise de processos organizacionais",
-        "Planejamento estratégico empresarial",
-        "Gestão de mudanças organizacionais",
-        "Otimização operacional e produtividade"
+        "Projetos Residenciais de luxo",
+        "Complexos de condomínios multifamiliares",
+        "Escritórios modernos e espaços comerciais",
+        "Edifícios industriais especializados"
       ],
-      price: "A partir de R$ 2.500"
+      category: "Engenharia e Construção"
     },
     {
-      icon: <Code className="h-8 w-8 text-[#E8A341]" />,
-      title: "Desenvolvimento de Soluções",
-      description: "Criação e desenvolvimento de soluções tecnológicas inovadoras do conceito ao lançamento no mercado.",
+      icon: <ClipboardCheck className="h-8 w-8 text-[#E8A341]" />,
+      title: "Fiscalização e Gestão de Obras",
+      description: "Atuamos como parceiro independente, assegurando que projetos sejam executados conforme especificações, prazos e orçamentos.",
       features: [
-        "Pesquisa e análise de mercado",
-        "Design e prototipagem de soluções",
-        "Desenvolvimento de sistemas",
-        "Testes, validação e implementação"
+        "Controlo de qualidade rigoroso",
+        "Gestão de prazos e custos",
+        "Relatórios de progresso detalhados",
+        "Comunicação eficiente entre partes"
       ],
-      price: "A partir de R$ 5.000"
+      category: "Engenharia e Construção"
     },
     {
-      icon: <TrendingUp className="h-8 w-8 text-[#E8A341]" />,
-      title: "Marketing e Crescimento",
-      description: "Estratégias digitais completas para aumentar sua presença online, gerar leads qualificados e impulsionar vendas.",
+      icon: <MapPin className="h-8 w-8 text-[#E8A341]" />,
+      title: "Obras de Infraestrutura",
+      description: "Construção de infraestruturas essenciais que facilitam o desenvolvimento de áreas urbanas e rurais em Angola.",
       features: [
-        "SEO e marketing de conteúdo",
-        "Gestão de redes sociais",
-        "Campanhas de email marketing",
-        "Analytics e relatórios de performance"
+        "Construção de estradas e pontes",
+        "Redes de drenagem e saneamento",
+        "Sistemas de abastecimento de água",
+        "Tratamento de esgoto para comunidades"
       ],
-      price: "A partir de R$ 1.800"
+      category: "Engenharia e Construção"
     },
     {
-      icon: <Users className="h-8 w-8 text-[#E8A341]" />,
-      title: "Gestão de Projetos",
-      description: "Gerenciamento profissional de projetos com metodologias ágeis, garantindo entregas no prazo e dentro do orçamento.",
+      icon: <Wrench className="h-8 w-8 text-[#E8A341]" />,
+      title: "Mecânica e Eletrônica Auto",
+      description: "Oficina mecânica de confiança com diagnóstico avançado e tecnologia de ponta para todos os modelos e marcas.",
       features: [
-        "Metodologias ágeis (Scrum/Kanban)",
-        "Controle de qualidade rigoroso",
-        "Gestão de riscos e contingências",
-        "Relatórios de progresso em tempo real"
+        "Diagnóstico avançado com tecnologia moderna",
+        "Reparações de motor e transmissão",
+        "Gestão de ECUs e sistemas ABS",
+        "Manutenção preventiva completa"
       ],
-      price: "A partir de R$ 3.200"
+      category: "Serviços Automóveis"
+    },
+    {
+      icon: <Paintbrush className="h-8 w-8 text-[#E8A341]" />,
+      title: "Bate-Chapa e Pintura",
+      description: "Restauração completa da beleza e estrutura de veículos, devolvendo-os ao estado original com arte e precisão.",
+      features: [
+        "Reparação completa de carrocaria",
+        "Pintura profissional com cabines modernas",
+        "Polimento de faróis e detalhes",
+        "Soldadura precisa para integridade do chassis"
+      ],
+      category: "Serviços Automóveis"
     },
     {
       icon: <Settings className="h-8 w-8 text-[#E8A341]" />,
-      title: "Automação de Processos",
-      description: "Implementação de soluções automatizadas para reduzir custos operacionais e aumentar significativamente a produtividade.",
+      title: "Serviços Especiais Automotivos",
+      description: "Serviços especializados para garantir segurança, conforto e performance ideal do seu veículo.",
       features: [
-        "Análise detalhada de workflows",
-        "Implementação de sistemas integrados",
-        "Treinamento completo de equipes",
-        "Suporte técnico contínuo"
+        "Alinhamento e balanceamento de precisão",
+        "Reparação de sistemas de ar condicionado",
+        "Diagnóstico e manutenção de fugas",
+        "Recargas de gás e reparação de componentes"
       ],
-      price: "A partir de R$ 4.000"
-    },
-    {
-      icon: <BarChart3 className="h-8 w-8 text-[#E8A341]" />,
-      title: "Business Intelligence",
-      description: "Transforme dados em insights valiosos para tomada de decisões estratégicas e crescimento sustentável do negócio.",
-      features: [
-        "Dashboards interativos personalizados",
-        "Análise avançada de dados",
-        "Relatórios executivos customizados",
-        "Previsões e análise de tendências"
-      ],
-      price: "A partir de R$ 3.500"
-    },
+      category: "Serviços Automóveis"
+    }
+  ];
+
+  const values = [
     {
       icon: <Target className="h-8 w-8 text-[#E8A341]" />,
-      title: "Planejamento Estratégico",
-      description: "Desenvolvimento de planos estratégicos abrangentes para posicionar sua empresa no mercado e alcançar objetivos de longo prazo.",
-      features: [
-        "Análise de mercado e concorrência",
-        "Definição de objetivos e metas",
-        "Roadmap de implementação",
-        "Monitoramento e ajustes contínuos"
-      ],
-      price: "A partir de R$ 4.500"
+      title: "Excelência e Rigor",
+      description: "Compromisso com os mais altos padrões de qualidade e segurança em cada projeto."
     },
     {
       icon: <Lightbulb className="h-8 w-8 text-[#E8A341]" />,
-      title: "Inovação e Transformação",
-      description: "Programas de inovação para transformar sua empresa, implementando novas tecnologias e processos disruptivos.",
-      features: [
-        "Workshops de design thinking",
-        "Implementação de novas tecnologias",
-        "Cultura de inovação organizacional",
-        "Acompanhamento de resultados"
-      ],
-      price: "A partir de R$ 6.000"
+      title: "Inovação",
+      description: "Busca constante por novas tecnologias, métodos e soluções que aumentem nossa eficiência."
     },
     {
       icon: <Shield className="h-8 w-8 text-[#E8A341]" />,
-      title: "Compliance e Governança",
-      description: "Estruturação de processos de compliance e governança corporativa para garantir conformidade e mitigar riscos.",
-      features: [
-        "Auditoria de processos internos",
-        "Implementação de controles",
-        "Treinamento em compliance",
-        "Monitoramento contínuo"
-      ],
-      price: "A partir de R$ 3.800"
+      title: "Integridade e Transparência",
+      description: "Atuamos com honestidade e clareza em todas as nossas relações comerciais."
     }
   ];
 
   const process = [
     {
       step: "01",
-      title: "Análise Inicial",
-      description: "Entendemos suas necessidades e objetivos específicos através de reuniões detalhadas."
+      title: "Análise e Diagnóstico",
+      description: "Avaliação detalhada das necessidades do projeto ou veículo com nossa equipe especializada."
     },
     {
       step: "02",
-      title: "Proposta Personalizada",
-      description: "Desenvolvemos uma solução sob medida para seu negócio com cronograma e investimento."
+      title: "Proposta Técnica",
+      description: "Desenvolvimento de solução personalizada com cronograma detalhado e orçamento transparente."
     },
     {
       step: "03",
-      title: "Implementação",
-      description: "Executamos o projeto com acompanhamento constante e comunicação transparente."
+      title: "Execução com Qualidade",
+      description: "Implementação do projeto com acompanhamento rigoroso e controle de qualidade constante."
     },
     {
       step: "04",
-      title: "Suporte Contínuo",
-      description: "Oferecemos suporte e otimizações após a entrega para garantir resultados duradouros."
+      title: "Entrega e Suporte",
+      description: "Finalização com garantia de qualidade e suporte contínuo para assegurar satisfação total."
     }
   ];
 
@@ -190,12 +175,12 @@ const Services = () => {
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
               Soluções
-              <span className="text-[#E8A341]"> Completas </span>
-              para seu Negócio
+              <span className="text-[#E8A341]"> Integradas </span>
+              de Alta Qualidade
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Oferecemos uma ampla gama de serviços especializados para 
-              impulsionar o crescimento e a eficiência da sua empresa.
+              Atuamos em Engenharia e Construção Civil e Serviços Automóveis, 
+              oferecendo soluções completas com tecnologia de ponta e equipe especializada.
             </p>
           </motion.div>
         </div>
@@ -215,6 +200,9 @@ const Services = () => {
               <motion.div key={index} variants={itemVariants}>
                 <Card className="hover:shadow-lg transition-all duration-300 h-full hover:-translate-y-1 border-t-4 border-t-[#E8A341]">
                   <CardHeader>
+                    <Badge className="w-fit mb-2 bg-orange-100 text-[#E8A341] border-[#E8A341]">
+                      {service.category}
+                    </Badge>
                     <div className="flex items-center mb-4">
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: 5 }}
@@ -235,19 +223,64 @@ const Services = () => {
                         </div>
                       ))}
                     </div>
-                    <div className="border-t pt-4">
-                      <p className="text-lg font-semibold text-[#E8A341] mb-4">
-                        {service.price}
-                      </p>
-                      <motion.div
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <Button className="w-full bg-[#E8A341] hover:bg-[#D4941F] text-white" asChild>
-                          <Link to="/contato">Solicitar Orçamento</Link>
-                        </Button>
-                      </motion.div>
-                    </div>
+                    <motion.div
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <Button className="w-full bg-[#E8A341] hover:bg-[#D4941F] text-white" asChild>
+                        <Link to="/contato">Solicitar Orçamento</Link>
+                      </Button>
+                    </motion.div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Nossos Valores
+            </h2>
+            <p className="text-xl text-gray-600">
+              Os princípios que guiam nossa atuação e garantem a excelência dos nossos serviços.
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {values.map((value, index) => (
+              <motion.div key={index} className="text-center" variants={itemVariants}>
+                <Card className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-[#E8A341]">
+                  <CardContent className="p-6">
+                    <motion.div 
+                      className="flex justify-center mb-4"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
+                      {value.icon}
+                    </motion.div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      {value.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {value.description}
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -257,7 +290,7 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -270,7 +303,7 @@ const Services = () => {
               Como Trabalhamos
             </h2>
             <p className="text-xl text-gray-600">
-              Nosso processo estruturado garante resultados excepcionais.
+              Nosso processo estruturado garante qualidade e transparência em cada etapa.
             </p>
           </motion.div>
           
@@ -307,39 +340,8 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-[#E8A341]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, staggerChildren: 0.1 }}
-            viewport={{ once: true }}
-          >
-            {[
-              { number: "500+", label: "Projetos Concluídos" },
-              { number: "150+", label: "Clientes Satisfeitos" },
-              { number: "98%", label: "Taxa de Sucesso" },
-              { number: "24/7", label: "Suporte Disponível" }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-orange-100">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-[#E8A341]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -347,19 +349,19 @@ const Services = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Pronto para Começar seu Projeto?
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Entre em contato conosco hoje mesmo e receba uma proposta 
-              personalizada para suas necessidades específicas.
+            <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+              Entre em contato conosco e descubra como o Grupo Girassol pode 
+              ser seu parceiro de confiança para soluções de alta qualidade.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button size="lg" asChild className="bg-[#E8A341] hover:bg-[#D4941F] text-white">
+                <Button size="lg" variant="secondary" asChild>
                   <Link to="/contato">
                     Solicitar Orçamento
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -370,8 +372,8 @@ const Services = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button size="lg" variant="outline" asChild className="border-[#E8A341] text-[#E8A341] hover:bg-[#E8A341] hover:text-white">
-                  <Link to="/produtos">Ver Nossos Produtos</Link>
+                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-[#E8A341]" asChild>
+                  <Link to="/sobre">Conheça Nossa História</Link>
                 </Button>
               </motion.div>
             </div>
