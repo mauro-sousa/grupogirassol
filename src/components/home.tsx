@@ -296,7 +296,7 @@ function Home() {
               viewport={{ once: true }}
             >
               <img
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80"
+                src="https://images.pexels.com/photos/16593777/pexels-photo-16593777.jpeg"
                 alt="Serviços Automóveis e Construção"
                 className="rounded-2xl shadow-xl"
               />
