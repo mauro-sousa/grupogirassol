@@ -116,8 +116,8 @@ const About = () => {
               Nossa História
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Sobre o
-              <span className="text-[#E8A341]"> Grupogirassol</span>
+              {/*Sobre o*/}
+              <span className="text-[#E8A341]"> GrupoGirassol</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Uma empresa comprometida com a excelência, inovação e o crescimento 

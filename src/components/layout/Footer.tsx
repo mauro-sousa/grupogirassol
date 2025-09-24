@@ -54,7 +54,8 @@ const Footer = () => {
                 { name: 'Início', href: '/' },
                 { name: 'Sobre Nós', href: '/sobre' },
                 { name: 'Serviços', href: '/servicos' },
-                { name: 'Produtos', href: '/produtos' },
+                // { name: 'Produtos', href: '/produtos' },
+                  { name: 'Contato', href: '/contato' },
               ].map((link, index) => (
                 <motion.li
                   key={link.name}

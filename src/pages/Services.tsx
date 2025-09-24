@@ -8,14 +8,14 @@ import {
   Paintbrush, 
   ClipboardCheck, 
   Settings, 
-  Zap,
+  // Zap,
   ArrowRight,
   CheckCircle,
   Target,
   Lightbulb,
   Shield,
-  Car,
-  Hammer,
+  // Car,
+  // Hammer,
   MapPin
 } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -175,7 +175,7 @@ const Services = () => {
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
               Soluções
-              <span className="text-[#E8A341]"> Integradas </span>
+              <span className="text-[#E8A341]"> Integradas </span><br/>
               de Alta Qualidade
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
