@@ -125,7 +125,7 @@ function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                Empresa angolana multifacetada atuando em Engenharia e Construção Civil 
+                Empresa Angolana multifacetada atuando em Engenharia e Construção Civil
                 e Serviços Automóveis. Somos parceiros de confiança, oferecendo soluções 
                 de alta qualidade com profissionalismo e transparência.
               </motion.p>
