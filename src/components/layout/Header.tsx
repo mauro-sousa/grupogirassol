@@ -13,7 +13,7 @@ const Header = () => {
     { name: 'Início', href: '/' },
     { name: 'Sobre', href: '/sobre' },
     { name: 'Serviços', href: '/servicos' },
-    // { name: 'Produtos', href: '/produtos' },
+    // { name: 'Goldenrose', href: '/produtos' },
     { name: 'Contato', href: '/contato' },
   ];
 
@@ -81,7 +81,7 @@ const Header = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Button asChild className="bg-[#E8A341] hover:bg-[#D4941F] text-white">
-                <Link to="/contato">Fale Conosco</Link>
+                <Link to="/Goldenrose">Visite a GoldenRose</Link>
               </Button>
             </motion.div>
           </div>

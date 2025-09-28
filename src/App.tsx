@@ -8,6 +8,7 @@ import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import Loading from "./components/ui/loading";
 import routes from "tempo-routes";
+import GoldenRose from "@/pages/Goldenrose.tsx";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +36,7 @@ function App() {
             <Route path="/servicos" element={<Services />} />
             <Route path="/produtos" element={<Products />} />
             <Route path="/contato" element={<Contact />} />
+              <Route path="/goldenrose" element={<GoldenRose />} />
           </Routes>
           {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
         </>
